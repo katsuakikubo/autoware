@@ -114,10 +114,10 @@ simulations:
       deployment:
         type: container
         artifact: main
-    runtime:
-      type: gpu1/amd64/large
-    parameters:
-      centerpoint_model_path: "/opt/autoware/mlmodels/centerpoint_tiny2_sunai"
+      runtime:
+        type: gpu1/amd64/large
+      parameters:
+        centerpoint_model_path: "/opt/autoware/mlmodels/centerpoint_tiny2_sunai"
 
 release:
   components:

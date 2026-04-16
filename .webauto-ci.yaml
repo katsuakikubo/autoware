@@ -19,6 +19,7 @@ artifacts:
           import_path: src
       environment_variables:
         AUTOWARE_PATH: /opt/autoware
+        ML_MODELS_PATH: /opt/autoware/mlmodels
         DEBIAN_FRONTEND: noninteractive
         LANG: C.UTF-8
       linux_parameters:

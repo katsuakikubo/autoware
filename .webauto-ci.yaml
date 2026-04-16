@@ -78,7 +78,7 @@ artifacts:
       base_container_image:
         from: ubuntu:22.04
       output_container_image:
-        from: autoware-build
+        from: asset-deploy
         workdir: /opt/autoware
         user: autoware
 
@@ -108,7 +108,16 @@ simulations:
         sensor_model: sample_sensor_kit
         initialize_duration: "90"
         launch_visualization: "false"
-
+  - name: perception
+    type: perception
+    simulator:
+      deployment:
+        type: container
+        artifact: main
+      runtime:
+        type: gpu1/amd64/large
+      parameters:
+        centerpoint_model_path: "/opt/autoware/mlmodels/centerpoint_tiny"
 release:
   components:
     - name: planning
